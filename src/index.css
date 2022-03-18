@@ -1,13 +1,75 @@
-body {
+
+
+body{
+  box-sizing: border-box;
+  padding:0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(5, 4, 39);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.images{
+ display:grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr ;
+ grid-template-rows: 1fr 1fr 1fr 1fr;
+ gap: 1em;
+ margin:0 auto;
+ padding:2rem;
+ border:solid 2px rgba(180, 9, 38, 0.466);
+ border-radius: 10px;
+ width: 75%;
+}
+
+.introduction, h2{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding:2rem;
+gap:2rem; 
+font-family: Arial, sans-serif;
+color: rgb(163, 127, 127);
+letter-spacing: 0.5em;
+
+}
+
+.btn button{
+ padding:2rem 5rem;
+ width:auto;
+ border:2px solid rgba(180, 9, 38, 0.726);
+ border-radius: 10px;
+ font-size: 1.5em;
+ cursor: pointer;
+ background-color: transparent;
+ color: rgb(163, 127, 127);
+}
+
+.btn:hover{
+box-shadow: rgb(180, 9, 37,0.7) 0px 2px 8px 0px;
+ 
+}
+
+.card{
+  position: relative;
+  margin:0 auto;
+  cursor: pointer;
+
+ 
+}
+
+.card img{
+  border:2px solid rgba(0, 0, 255, 0.342);
+  border-radius: 10px;
+}
+
+
+
+.card .front{
+transform: rotateY(90deg);
+ position: absolute;
+transition: all 0.5s ease-in-out;
+}
+
+
+.flipped .front{
+  transform: rotateY(0deg);
 }
